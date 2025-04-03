@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 // Componente funcional que recibe un GIF y lo muestra en una tarjeta
 export const GifItem = ({ title, url, id }) => {
   // Comentado: Muestra en consola los datos recibidos del GIF
@@ -15,10 +17,9 @@ export const GifItem = ({ title, url, id }) => {
     </>
   );
 };
-
-// PropTypes
-GifItem.propTypes = {
+//ojo verificar el nuevo funcionamiento de prop-types en versiones actuales de react
+//porque ya no esta evaluando de esta manera.
+GifItem.prototypes = {
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  // Adevertencia los prototypes  no funcionan en esta version de react
 };
