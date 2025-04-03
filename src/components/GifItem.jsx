@@ -1,5 +1,5 @@
 // Componente funcional que recibe un GIF y lo muestra en una tarjeta
-export const GifItem = ({ title, url }) => {
+export const GifItem = ({ title, url, id }) => {
   // Comentado: Muestra en consola los datos recibidos del GIF
   // console.log(title, url, id);
 
@@ -14,4 +14,11 @@ export const GifItem = ({ title, url }) => {
       </div>
     </>
   );
+};
+
+// PropTypes
+GifItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  // Adevertencia los prototypes  no funcionan en esta version de react
 };
